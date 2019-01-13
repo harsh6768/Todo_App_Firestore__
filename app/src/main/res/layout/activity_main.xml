@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+   <android.support.design.widget.AppBarLayout
+       android:id="@+id/main_appbar_layoutId"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:fitsSystemWindows="true"
+       android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+       <LinearLayout
+           android:orientation="vertical"
+           android:id="@+id/main_linear_layoutId"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:padding="16dp"
+           android:background="@color/colorPrimary">
+
+           <com.rengwuxian.materialedittext.MaterialEditText
+               android:id="@+id/main_titleId"
+               android:textSize="24sp"
+               android:hint="Title"
+               android:backgroundTint="@color/colorAccent"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               app:met_baseColor="@android:color/white"
+               app:met_floatingLabel="highlight"
+               app:met_singleLineEllipsis="true"
+               app:met_primaryColor="@color/colorAccent"
+               />
+
+           <com.rengwuxian.materialedittext.MaterialEditText
+               android:id="@+id/main_descriptionId"
+               android:textSize="24sp"
+               android:hint="Description"
+               android:inputType="textMultiLine"
+               android:backgroundTint="@color/colorAccent"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               app:met_baseColor="@android:color/white"
+               app:met_floatingLabel="highlight"
+               app:met_singleLineEllipsis="true"
+               app:met_primaryColor="@color/colorAccent"
+               />
+
+       </LinearLayout>
+
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/main_flotingBtnId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:elevation="6dp"
+        android:background="@color/colorPrimary"
+        android:backgroundTint="#fff"
+        app:pressedTranslationZ="12dp"
+        app:fabSize="normal"
+        app:layout_anchor="@id/main_appbar_layoutId"
+        app:layout_anchorGravity="bottom|right"
+        android:src="@mipmap/floting_btn"
+        />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/main_recyclerviewId"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </android.support.v7.widget.RecyclerView>
+
+
+</android.support.design.widget.CoordinatorLayout>
